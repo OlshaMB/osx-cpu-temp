@@ -296,7 +296,7 @@ void readAndPrintFanRPMs(void)
     }
 }
 
-int main(int argc, char* argv[])
+/*int main(int argc, char* argv[])
 {
     char scale = 'C';
     int cpu = 0;
@@ -354,4 +354,10 @@ int main(int argc, char* argv[])
 
     SMCClose();
     return 0;
+}*/
+double cpuT(){
+    SMCOpen();
+    double a = SMCGetTemperature(SMC_KEY_CPU_TEMP);
+    SMCClose();
+    return a;
 }
