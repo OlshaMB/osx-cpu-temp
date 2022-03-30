@@ -361,3 +361,9 @@ double cpuT(){
     SMCClose();
     return a;
 }
+double gpuT(){
+    SMCOpen();
+    double a = SMCGetTemperature(SMC_KEY_GPU_TEMP);
+    SMCClose();
+    return a;
+}
